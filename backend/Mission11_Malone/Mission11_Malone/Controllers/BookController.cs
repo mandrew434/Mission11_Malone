@@ -17,11 +17,18 @@ namespace Mission11_Malone.Controllers
 
         // GET: /Book/AllBooks
         [HttpGet("AllBooks")]
-        public IActionResult GetBooks(int pageSize = 5, string sortBy = "Title", int pageNum = 1, string order = "asc")
+        public IActionResult GetBooks(int pageSize = 5, string sortBy = "Title", int pageNum = 1, string order = "asc", [FromQuery] List<string>? bookCategory = null)
         {
 
             // Validate the query parameters
             var booksQuery = _bookContext.Books.AsQueryable();
+
+            //Allow to sort by multiple fields if needed
+            if (bookCategory != null && bookCategory.Any())
+            {
+                booksQuery = booksQuery.Where(b => bookCategory.Contains(b.Category));
+                Console.WriteLine("Filtering books by categories: " + string.Join(", ", bookCategory));
+            }
 
             // Apply sorting
             booksQuery = order.ToLower() == "desc"
@@ -29,7 +36,7 @@ namespace Mission11_Malone.Controllers
                 : booksQuery.OrderBy(b => EF.Property<object>(b, sortBy));
 
 
-            int totalItems = booksQuery.Count();
+            var totalItems = booksQuery.Count();
 
             // Apply pagination
             var returnBooks = booksQuery
@@ -45,6 +52,19 @@ namespace Mission11_Malone.Controllers
             };
 
             return Ok(returnObject);
+        }
+
+        // GET request for book categories
+        [HttpGet("GetBookCategories")]
+        public IActionResult GetBookCategories () 
+        {
+            var bookCategories = _bookContext.Books
+                .Select(b => b.Category)
+                .Distinct()
+                .ToList();
+
+            // Return the list of distinct book categories
+            return Ok(bookCategories);
         }
 
     }

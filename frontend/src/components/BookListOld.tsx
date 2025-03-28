@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Book } from './types/Book';
+import { Book } from '../types/Book';
+import { useNavigate } from "react-router-dom";
 
-function BookList() {
+function BookList({selectedCategories}: {selectedCategories: string[]}) {
 
     const [books, setBooks] = useState<Book[]>([]);
     const [pageSize, setPageSize] = useState<number>(5);
@@ -10,11 +11,16 @@ function BookList() {
     const [totalPages, setTotalPages] = useState<number>(0);
     const [sortBy, setSortBy] = useState<string>("Title");
     const [order, setOrder] = useState<string>("asc");
+    const navigate = useNavigate();
 
     // Fetch books from API
     useEffect(() => {
         const fetchBooks = async () => {
-            const response = await fetch(`https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sortBy=${sortBy}&order=${order}`);
+
+            const categoryParams = selectedCategories.map((cat) => `bookCategory=${encodeURIComponent(cat)}`).join('&');
+
+
+            const response = await fetch(`https://localhost:5000/Book/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sortBy=${sortBy}&order=${order}${selectedCategories.length ? `&${categoryParams}` : ''}`);
             const data = await response.json();
 
             // Log response to debug
@@ -27,7 +33,7 @@ function BookList() {
         };
         // Call fetchBooks function
         fetchBooks();
-    }, [pageNum, pageSize, sortBy, order]);
+    }, [pageNum, pageSize, sortBy, order, totalItems, selectedCategories]);
 
     // Return JSX
     return (
@@ -64,7 +70,10 @@ function BookList() {
                                 <li><strong>Page Count: </strong>{b.pageCount}</li>
                                 <li><strong>Price: </strong>${b.price}</li>
                             </ul>
-                        </div>
+                            <button 
+                            className="btn btn-success" 
+                            onClick={() => navigate(`/buybook/${b.bookId}/${b.title}/${b.author}/${b.price}/${b.category}`)}>Add to Cart</button>
+                    </div>
                     </div>
                 </div>
                 
