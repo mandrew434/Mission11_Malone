@@ -9,7 +9,7 @@ function CategoryFilter ({selectedCategories, setSelectedCategories}: {selectedC
     useEffect(() => {
         const fetchCategories = async () => {
             try{
-                const response = await fetch("https://localhost:5000/Book/GetBookCategories");
+                const response = await fetch("https://kind-ocean-0ca48481e.6.azurestaticapps.net/Book/GetBookCategories");
                 const data = await response.json();
                 console.log("Fetched categories: ",data);
                 setCategories(data);
