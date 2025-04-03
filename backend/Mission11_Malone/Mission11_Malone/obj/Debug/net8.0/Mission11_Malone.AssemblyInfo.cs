@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mission11_Malone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0c6538128a6820dd5325177c031ffc7e3838fa2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+411b310d2b53406c79b45aabf5bad5ac8919f5c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mission11_Malone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mission11_Malone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
