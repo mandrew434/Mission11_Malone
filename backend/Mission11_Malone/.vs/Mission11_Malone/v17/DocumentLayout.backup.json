@@ -34,24 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mandr\\source\\repos\\Mission11_Malone\\backend\\Mission11_Malone\\Mission11_Malone\\Program.cs",
-              "RelativeDocumentMoniker": "Mission11_Malone\\Program.cs",
-              "ToolTip": "C:\\Users\\mandr\\source\\repos\\Mission11_Malone\\backend\\Mission11_Malone\\Mission11_Malone\\Program.cs",
-              "RelativeToolTip": "Mission11_Malone\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T23:03:54.006Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -63,8 +50,7 @@
               "RelativeToolTip": "Mission11_Malone\\Data\\BookDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T22:57:13.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T22:57:13.713Z"
             },
             {
               "$type": "Document",
@@ -76,8 +62,7 @@
               "RelativeToolTip": "Mission11_Malone\\Data\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T22:52:41.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T22:52:41.285Z"
             },
             {
               "$type": "Document",
@@ -94,6 +79,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mandr\\source\\repos\\Mission11_Malone\\backend\\Mission11_Malone\\Mission11_Malone\\Program.cs",
+              "RelativeDocumentMoniker": "Mission11_Malone\\Program.cs",
+              "ToolTip": "C:\\Users\\mandr\\source\\repos\\Mission11_Malone\\backend\\Mission11_Malone\\Mission11_Malone\\Program.cs",
+              "RelativeToolTip": "Mission11_Malone\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T23:03:54.006Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\mandr\\source\\repos\\Mission11_Malone\\backend\\Mission11_Malone\\Mission11_Malone\\Controllers\\BookController.cs",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "Mission11_Malone\\Controllers\\BookController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T23:15:21.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T23:15:21.199Z"
             },
             {
               "$type": "Document",
