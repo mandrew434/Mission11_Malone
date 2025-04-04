@@ -2,12 +2,15 @@ import { useState } from "react"
 import { Book } from "../types/Book"
 import { updateBook } from "../api/BookAPI";
 
+// This component is used to edit an existing book's details. It takes in the book object, a success callback, and a cancel callback as props.
 interface NewBookFormProps {
     book: Book;
     onSuccess: () => void;
     onCancel: () => void;
 }
 
+// This function is used to create a form for editing book details. It uses the useState hook to manage form data and handles form submission.
+// It also handles input changes and updates the form data accordingly.
 const EditBookForm = ({book, onSuccess, onCancel}: NewBookFormProps) => {
     const [formData, setFormData] = useState<Book>({...book});
     

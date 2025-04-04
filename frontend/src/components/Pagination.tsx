@@ -6,6 +6,8 @@ interface PaginationProps {
     onPageSizeChange: (newPageSize: number) => void;
 }
 
+// This component is used to display pagination controls for navigating through a list of items. It takes in the current page, total pages, page size, and functions to handle page changes and page size changes as props.
+// It renders buttons for navigating to the previous and next pages, as well as a dropdown for selecting the number of results per page.
 const Pagination = ({currentPage, totalPages, pageSize, onPageChange, onPageSizeChange}: PaginationProps) => {
 
     return(

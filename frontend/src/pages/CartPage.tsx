@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import CartTable from "../components/CartTable";
 
+// This component is responsible for displaying the cart page. It retrieves the cart items from the CartContext and calculates the total amount. It also includes buttons to proceed to checkout or continue browsing books.
 function CartPage () {
     const navigate = useNavigate();
     const {cart, removeFromCart} = useCart();

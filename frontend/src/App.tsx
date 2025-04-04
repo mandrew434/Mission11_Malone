@@ -10,7 +10,8 @@ import AdminBooksPage from './pages/AdminBooksPage';
 function App() {
 
   
-  
+  // This is the main App component that sets up the routing for the application. It uses the BrowserRouter from react-router-dom to define different routes for the application.
+  // The CartProvider wraps the entire application to provide cart functionality across all pages.
   return (
     <>
       <CartProvider>

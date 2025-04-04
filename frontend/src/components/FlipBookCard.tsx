@@ -3,6 +3,8 @@ import "./FlipBookCard.css"; // Import custom styles
 import { Book } from "../types/Book";
 import { useNavigate } from "react-router-dom";
 
+// This component displays a flip card for each book with its details on the back side and a button to add it to the cart.
+// It uses the useNavigate hook from react-router-dom to navigate to the buy book page when the button is clicked.
 function FlipBookCard({ book }: { book: Book }) {
   const navigate = useNavigate();
 

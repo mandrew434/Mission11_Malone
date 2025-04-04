@@ -4,7 +4,7 @@ import { useState } from "react";
 import WelcomeBand from "../components/WelcomeBand";
 import CartSummary from "../components/CartSummary";
 
-
+// This component is the main page for displaying books. It includes a category filter, a book list, and a cart summary.
 function BooksPage() {
 
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);

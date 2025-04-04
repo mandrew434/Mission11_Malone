@@ -4,6 +4,7 @@ import { useCart } from "../context/CartContext";
 
 const CartSummary = () => {
 
+    // This component displays the total amount in the cart and navigates to the cart page when clicked.
     const navigate = useNavigate();
     const { cart } = useCart();
     const totalAmount = cart.reduce((sum,item) => sum + item.price, 0);

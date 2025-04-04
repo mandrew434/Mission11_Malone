@@ -2,11 +2,13 @@ import { useState } from "react"
 import { Book } from "../types/Book"
 import { addBook } from "../api/BookAPI";
 
+//The interface NewBookFormProps defines the structure of the props that the NewBookForm component will receive.
 interface NewBookFormProps {
     onSuccess: () => void;
     onCancel: () => void;
 }
 
+// This component is used to create a new book. It takes in a success callback and a cancel callback as props.
 const NewBookForm = ({onSuccess, onCancel}: NewBookFormProps) => {
     const [formData, setFormData] = useState<Book>({
         bookId: 0,
@@ -20,10 +22,12 @@ const NewBookForm = ({onSuccess, onCancel}: NewBookFormProps) => {
         price: 0.00,
     });
     
+    // This function handles input changes and updates the form data accordingly.
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({...formData, [e.target.name]: e.target.value,});
     };
 
+    // This function handles form submission and calls the addBook API function.
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         await addBook(formData);

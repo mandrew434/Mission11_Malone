@@ -1,12 +1,15 @@
 import { Book } from "../types/Book";
 
+// The FetchBookResponse interface defines the structure of the response from the API when fetching books.
 interface FetchBookResponse {
     books: Book[];
     totalNumBooks: number;
 }
 
+// The API URL for fetching books. This should be replaced with the actual backend URL.
 const API_URL = "https://book-malone-backend-cqbrfphzepdqexe2.eastus-01.azurewebsites.net/Book";
 
+// This function fetches books from the API with pagination, sorting, and filtering by categories.
 export const fetchBooks = async (
     pageSize: number,
     pageNum: number,

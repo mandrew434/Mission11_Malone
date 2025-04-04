@@ -3,11 +3,15 @@ import WelcomeBand from "../components/WelcomeBand";
 import { useCart } from "../context/CartContext";
 import { CartItem } from "../types/CartItem";
 
+// This component is responsible for displaying the purchase page for a specific book. It retrieves the book details from the URL parameters and allows the user to add the book to their cart.
+// It uses the useNavigate hook from react-router-dom to navigate back to the previous page or to the cart page after adding the book to the cart.
 function BuyBooksPage() {
     const navigate = useNavigate();
     const {title, bookId, author, price, category} = useParams();
     const {addToCart} = useCart();
 
+    //This function handles the addition of the book to the cart. It creates a new CartItem object with the book details and calls the addToCart function from the CartContext. After adding the item to the cart, it navigates to the cart page.
+    // It also includes fallback values for title, author, and category in case they are not provided in the URL parameters.
     const handleAddToCart = () =>
     {
         const newItem: CartItem = {

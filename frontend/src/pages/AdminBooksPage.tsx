@@ -5,6 +5,8 @@ import Pagination from "../components/Pagination";
 import NewBookForm from "../components/NewBookForm";
 import EditBookForm from "../components/EditBookForm";
 
+// This component is used to manage the admin page for books. It allows the admin to view, add, edit, and delete books.
+// It uses the useState and useEffect hooks to manage state and side effects, respectively.
 const AdminProjectsPage = () => {
     
     const [books, setBooks] = useState<Book[]>([]);
@@ -33,6 +35,7 @@ const AdminProjectsPage = () => {
 
     }, [pageSize, pageNum]);
 
+    // This function handles the deletion of a book. It prompts the user for confirmation before deleting the book.
     const handleDelete = async (bookId: number) => {
         const confirmDelete = window.confirm('Are you sure you want to delete this book?');
         if (!confirmDelete) return;
@@ -44,6 +47,7 @@ const AdminProjectsPage = () => {
         }
     }
 
+    //These if statements handle loading and error states. If the data is still loading, it shows a loading message. If there is an error, it shows an error message.
     if (loading) return <p>Loading Books</p>;
     if (error) return <p className="text-red-500">Error: {error}</p>;
 

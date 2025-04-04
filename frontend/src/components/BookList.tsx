@@ -4,6 +4,7 @@ import FlipBookCard from "./FlipBookCard"; // Import the new flip card component
 import { fetchBooks } from "../api/BookAPI";
 import Pagination from "./Pagination";
 
+// The BookList component fetches and displays a list of books with pagination and sorting.
 function BookList({ selectedCategories }: { selectedCategories: string[] }) {
     const [books, setBooks] = useState<Book[]>([]);
     const [pageSize, setPageSize] = useState<number>(5);
@@ -14,6 +15,7 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
+    // useEffect to fetch books when the component mounts or when dependencies change
   useEffect(() => {
     const loadBooks = async () => {
         
@@ -49,6 +51,7 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
   
   console.log("Total Pages:", totalPages);
 
+  // Return the JSX for the component
   return (
     <>
     <div className="container mt-4">

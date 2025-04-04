@@ -15,6 +15,7 @@ function CartTable({ cart, removeFromCart }: CartTableProps) {
     b.title.toLowerCase().includes(search.toLowerCase())
   );
 
+  // This component displays the cart items in a table format with a search bar to filter items by title.
   return (
     <div>
       {/* Search Bar */}
