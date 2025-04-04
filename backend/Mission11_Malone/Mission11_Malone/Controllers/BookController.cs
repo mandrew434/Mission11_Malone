@@ -76,6 +76,7 @@ namespace Mission11_Malone.Controllers
             return Ok(newBook);
         }
 
+        // GET request for a specific book by ID
         [HttpPut("UpdateBook/{bookId}")]
         public IActionResult UpdateBook(int bookId, [FromBody] Book updatedBook)
         {

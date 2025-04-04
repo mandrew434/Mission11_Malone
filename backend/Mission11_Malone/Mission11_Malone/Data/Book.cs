@@ -8,17 +8,17 @@ namespace Mission11_Malone.Data
         [Key]
         public int BookId { get; set; }
         [Required]
-        public string Title { get; set; }
+        public required string Title { get; set; }
         [Required]
-        public string Author { get; set; }
+        public required string Author { get; set; }
         [Required]
-        public string Publisher { get; set; }
+        public required string Publisher { get; set; }
         [Required]
-        public string ISBN { get; set; }
+        public required string ISBN { get; set; }
         [Required]
-        public string Classification { get; set; }
+        public required string Classification { get; set; }
         [Required]
-        public string Category { get; set; }
+        public required string Category { get; set; }
         [Required]
         public int PageCount { get; set; }
         [Required]
